@@ -124,7 +124,7 @@
             this.JenisKelaminCb.Items.AddRange(new object[] {
             "Laki-laki",
             "Perempuan"});
-            this.JenisKelaminCb.Location = new System.Drawing.Point(415, 117);
+            this.JenisKelaminCb.Location = new System.Drawing.Point(416, 115);
             this.JenisKelaminCb.Name = "JenisKelaminCb";
             this.JenisKelaminCb.Size = new System.Drawing.Size(174, 33);
             this.JenisKelaminCb.TabIndex = 21;
