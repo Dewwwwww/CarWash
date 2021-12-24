@@ -16,7 +16,7 @@ namespace CarWash
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Customers());
+            Application.Run(new Services());
         }
     }
 }
