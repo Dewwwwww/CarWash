@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Karyawan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.KAlamatTb = new System.Windows.Forms.TextBox();
@@ -41,8 +41,11 @@
             this.KNamaTb = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.KaryawanDGV = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.KPassTb = new System.Windows.Forms.TextBox();
             this.DeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.EditBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SaveBtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -50,9 +53,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LogoutBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,14 +68,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.KaryawanDGV = new Guna.UI.WinForms.GunaDataGridView();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KaryawanDGV)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -83,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KaryawanDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -127,7 +127,7 @@
             this.KJenisKelaminCb.Items.AddRange(new object[] {
             "Laki-laki",
             "Perempuan"});
-            this.KJenisKelaminCb.Location = new System.Drawing.Point(416, 115);
+            this.KJenisKelaminCb.Location = new System.Drawing.Point(357, 115);
             this.KJenisKelaminCb.Name = "KJenisKelaminCb";
             this.KJenisKelaminCb.Size = new System.Drawing.Size(174, 33);
             this.KJenisKelaminCb.TabIndex = 21;
@@ -139,7 +139,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(219)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
-            this.label8.Location = new System.Drawing.Point(275, 92);
+            this.label8.Location = new System.Drawing.Point(226, 92);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 22);
             this.label8.TabIndex = 20;
@@ -148,7 +148,7 @@
             // KNomorTb
             // 
             this.KNomorTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KNomorTb.Location = new System.Drawing.Point(228, 117);
+            this.KNomorTb.Location = new System.Drawing.Point(179, 117);
             this.KNomorTb.Name = "KNomorTb";
             this.KNomorTb.Size = new System.Drawing.Size(159, 30);
             this.KNomorTb.TabIndex = 19;
@@ -156,7 +156,7 @@
             // KNamaTb
             // 
             this.KNamaTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KNamaTb.Location = new System.Drawing.Point(42, 117);
+            this.KNamaTb.Location = new System.Drawing.Point(8, 117);
             this.KNamaTb.Name = "KNamaTb";
             this.KNamaTb.Size = new System.Drawing.Size(159, 30);
             this.KNamaTb.TabIndex = 0;
@@ -182,6 +182,66 @@
             this.panel5.Size = new System.Drawing.Size(875, 285);
             this.panel5.TabIndex = 24;
             // 
+            // KaryawanDGV
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.KaryawanDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.KaryawanDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.KaryawanDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.KaryawanDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KaryawanDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.KaryawanDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KaryawanDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.KaryawanDGV.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.KaryawanDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.KaryawanDGV.EnableHeadersVisualStyles = false;
+            this.KaryawanDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(219)))));
+            this.KaryawanDGV.Location = new System.Drawing.Point(0, 40);
+            this.KaryawanDGV.Name = "KaryawanDGV";
+            this.KaryawanDGV.RowHeadersVisible = false;
+            this.KaryawanDGV.RowHeadersWidth = 51;
+            this.KaryawanDGV.RowTemplate.Height = 24;
+            this.KaryawanDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.KaryawanDGV.Size = new System.Drawing.Size(875, 242);
+            this.KaryawanDGV.TabIndex = 26;
+            this.KaryawanDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.KaryawanDGV.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.KaryawanDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(219)))));
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Emoji", 10.5F);
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.KaryawanDGV.ThemeStyle.HeaderStyle.Height = 25;
+            this.KaryawanDGV.ThemeStyle.ReadOnly = false;
+            this.KaryawanDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.KaryawanDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.KaryawanDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KaryawanDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.KaryawanDGV.ThemeStyle.RowsStyle.Height = 24;
+            this.KaryawanDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.KaryawanDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.KaryawanDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KaryawanDGV_CellContentClick);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -197,6 +257,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(219)))));
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.KPassTb);
             this.panel4.Controls.Add(this.DeleteBtn);
             this.panel4.Controls.Add(this.EditBtn);
             this.panel4.Controls.Add(this.SaveBtn);
@@ -213,6 +275,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(935, 555);
             this.panel4.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(219)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.label7.Location = new System.Drawing.Point(578, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 22);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Password";
+            // 
+            // KPassTb
+            // 
+            this.KPassTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KPassTb.Location = new System.Drawing.Point(549, 117);
+            this.KPassTb.Name = "KPassTb";
+            this.KPassTb.Size = new System.Drawing.Size(159, 30);
+            this.KPassTb.TabIndex = 28;
             // 
             // DeleteBtn
             // 
@@ -298,7 +380,7 @@
             this.Nama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(219)))));
             this.Nama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
-            this.Nama.Location = new System.Drawing.Point(89, 92);
+            this.Nama.Location = new System.Drawing.Point(55, 92);
             this.Nama.Name = "Nama";
             this.Nama.Size = new System.Drawing.Size(61, 22);
             this.Nama.TabIndex = 18;
@@ -327,9 +409,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.panel2.Controls.Add(this.LogoutBtn);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.label3);
@@ -348,6 +429,32 @@
             this.panel2.Size = new System.Drawing.Size(251, 586);
             this.panel2.TabIndex = 0;
             // 
+            // LogoutBtn
+            // 
+            this.LogoutBtn.ActiveBorderThickness = 1;
+            this.LogoutBtn.ActiveCornerRadius = 20;
+            this.LogoutBtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.LogoutBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.LogoutBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.LogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
+            this.LogoutBtn.ButtonText = "Logout";
+            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoutBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.LogoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.IdleBorderThickness = 1;
+            this.LogoutBtn.IdleCornerRadius = 20;
+            this.LogoutBtn.IdleFillColor = System.Drawing.Color.White;
+            this.LogoutBtn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.Location = new System.Drawing.Point(36, 518);
+            this.LogoutBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(170, 45);
+            this.LogoutBtn.TabIndex = 33;
+            this.LogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -360,28 +467,6 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Car Wash";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(82, 533);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Logout";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 527);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(219, 37);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 16;
-            this.pictureBox11.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -393,6 +478,7 @@
             this.label4.Size = new System.Drawing.Size(79, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Services";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox10
             // 
@@ -416,6 +502,7 @@
             this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Customers";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox9
             // 
@@ -439,6 +526,7 @@
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Karyawan";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox8
             // 
@@ -462,6 +550,7 @@
             this.label1.Size = new System.Drawing.Size(56, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Wash";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox7
             // 
@@ -524,66 +613,6 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // KaryawanDGV
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.KaryawanDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.KaryawanDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.KaryawanDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            this.KaryawanDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.KaryawanDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.KaryawanDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.KaryawanDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.KaryawanDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.KaryawanDGV.DefaultCellStyle = dataGridViewCellStyle6;
-            this.KaryawanDGV.EnableHeadersVisualStyles = false;
-            this.KaryawanDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(219)))));
-            this.KaryawanDGV.Location = new System.Drawing.Point(0, 40);
-            this.KaryawanDGV.Name = "KaryawanDGV";
-            this.KaryawanDGV.RowHeadersVisible = false;
-            this.KaryawanDGV.RowHeadersWidth = 51;
-            this.KaryawanDGV.RowTemplate.Height = 24;
-            this.KaryawanDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.KaryawanDGV.Size = new System.Drawing.Size(875, 242);
-            this.KaryawanDGV.TabIndex = 26;
-            this.KaryawanDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.KaryawanDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.KaryawanDGV.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            this.KaryawanDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(219)))));
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Emoji", 10.5F);
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KaryawanDGV.ThemeStyle.HeaderStyle.Height = 4;
-            this.KaryawanDGV.ThemeStyle.ReadOnly = false;
-            this.KaryawanDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.KaryawanDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.KaryawanDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KaryawanDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.KaryawanDGV.ThemeStyle.RowsStyle.Height = 24;
-            this.KaryawanDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.KaryawanDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.KaryawanDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KaryawanDGV_CellContentClick);
-            // 
             // Karyawan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -596,6 +625,7 @@
             this.Text = "Karyawan";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KaryawanDGV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -603,7 +633,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -613,7 +642,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KaryawanDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,8 +667,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label3;
@@ -655,5 +681,8 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI.WinForms.GunaDataGridView KaryawanDGV;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox KPassTb;
+        private Bunifu.Framework.UI.BunifuThinButton2 LogoutBtn;
     }
 }

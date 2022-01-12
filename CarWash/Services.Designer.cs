@@ -35,8 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.ServiceTb = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LogoutBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -67,7 +66,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -110,28 +108,6 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Car Wash";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(82, 533);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Logout";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 527);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(219, 37);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 16;
-            this.pictureBox11.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -166,6 +142,7 @@
             this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Customers";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox9
             // 
@@ -189,6 +166,7 @@
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Karyawan";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox8
             // 
@@ -232,9 +210,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.panel2.Controls.Add(this.LogoutBtn);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.label3);
@@ -253,6 +230,32 @@
             this.panel2.Size = new System.Drawing.Size(251, 586);
             this.panel2.TabIndex = 0;
             // 
+            // LogoutBtn
+            // 
+            this.LogoutBtn.ActiveBorderThickness = 1;
+            this.LogoutBtn.ActiveCornerRadius = 20;
+            this.LogoutBtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.LogoutBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.LogoutBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.LogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(104)))), ((int)(((byte)(160)))));
+            this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
+            this.LogoutBtn.ButtonText = "Logout";
+            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoutBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
+            this.LogoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.IdleBorderThickness = 1;
+            this.LogoutBtn.IdleCornerRadius = 20;
+            this.LogoutBtn.IdleFillColor = System.Drawing.Color.White;
+            this.LogoutBtn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(71)))), ((int)(((byte)(107)))));
+            this.LogoutBtn.Location = new System.Drawing.Point(30, 525);
+            this.LogoutBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Size = new System.Drawing.Size(170, 45);
+            this.LogoutBtn.TabIndex = 33;
+            this.LogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -264,6 +267,7 @@
             this.label1.Size = new System.Drawing.Size(56, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Wash";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox7
             // 
@@ -459,7 +463,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ServiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.ServiceDGV.ColumnHeadersHeight = 4;
+            this.ServiceDGV.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -491,7 +495,7 @@
             this.ServiceDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Emoji", 10.5F);
             this.ServiceDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.ServiceDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.ServiceDGV.ThemeStyle.HeaderStyle.Height = 4;
+            this.ServiceDGV.ThemeStyle.HeaderStyle.Height = 25;
             this.ServiceDGV.ThemeStyle.ReadOnly = false;
             this.ServiceDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.ServiceDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -556,7 +560,6 @@
             this.Name = "Services";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Services";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -584,8 +587,6 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label3;
@@ -616,5 +617,6 @@
         private Guna.UI.WinForms.GunaDataGridView ServiceDGV;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
+        private Bunifu.Framework.UI.BunifuThinButton2 LogoutBtn;
     }
 }

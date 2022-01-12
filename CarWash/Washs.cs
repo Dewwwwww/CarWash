@@ -18,6 +18,7 @@ namespace CarWash
             InitializeComponent();
             GetNamaCust();
             GetNamaService();
+            NamaKaryawan.Text = LoginUser.Username;
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dew\Documents\CarWashDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void GetNamaCust()
@@ -138,6 +139,34 @@ namespace CarWash
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Services services = new Services();
+            services.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Customers customers = new Customers();
+            customers.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //Karyawan karyawan = new Karyawan();
+            //karyawan.Show();
+            //this.Hide();
         }
 
         private void ServiceCb_SelectionChangeCommitted(object sender, EventArgs e)

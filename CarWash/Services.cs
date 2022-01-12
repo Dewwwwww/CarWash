@@ -120,5 +120,33 @@ namespace CarWash
                 key = Convert.ToInt32(ServiceDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Customers customers = new Customers();
+            customers.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Washs washs = new Washs();
+            washs.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //Karyawan karyawan = new Karyawan();
+            //karyawan.Show();
+            //this.Hide();
+        }
     }
 }

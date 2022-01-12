@@ -16,5 +16,12 @@ namespace CarWash
         {
             InitializeComponent();
         }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.Show();
+            this.Hide();
+        }
     }
 }
